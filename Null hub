@@ -23,7 +23,7 @@ Name = <string> - The name of the section.
 ]]
 
 Tab:AddButton({
-	Name = "Titan Cameraman",
+	Name = "Titan Cameraman(cost 750)",
 	Callback = function()
 local args = {
     [1] = "Titan Cameraman"
@@ -119,7 +119,7 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
 })
 
 Tab:AddButton({
-	Name = "Titan Cinemaman",
+	Name = "Titan Cinemaman(cost 2000)",
 	Callback = function()
 local args = {
     [1] = "Titan Cinemaman"
@@ -143,7 +143,7 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
 })
 
 Tab:AddButton({
-	Name = "Upgraded Titan Speakerman",
+	Name = "Upgraded Titan Speakerman(cost 1000)",
 	Callback = function()
 local args = {
     [1] = "Upgraded Titan Speakerman"
@@ -167,7 +167,7 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
 })
 
 Tab:AddButton({
-	Name = "Titan Presentwoman",
+	Name = "Titan Presentwoman(cost 2000)",
 	Callback = function()
 local args = {
     [1] = "Titan Presentwoman"
@@ -280,7 +280,7 @@ Name = <string> - The name of the section.
 ]]
 
 Tab:AddButton({
-	Name = "Jetpack Cameraman",
+	Name = "Jetpack Cameraman(cost 300)",
 	Callback = function()
 local args = {
     [1] = "Jetpack Cameraman"
