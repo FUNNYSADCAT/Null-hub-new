@@ -390,8 +390,8 @@ Tab:AddSlider({
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "speed",
-	Callback = function(Value)
-		print(Value)
+	Callback = function(Slider:Set(2))
+		print(Slider:Set(2))
 		-- เพิ่มค่าความเร็วที่นี่
 		local speed = Value -- สมมุติว่าใช้ค่าจาก Slider เป็น speed
 		print("Speed is: " .. speed)
@@ -405,8 +405,5 @@ Tab:AddSlider({
 		humanoid.WalkSpeed = speed -- ตั้งค่าความเร็วให้กับตัวละคร
 
 
-
 	end    
 })
-
-Slider:Set(2)
