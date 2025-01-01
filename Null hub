@@ -380,3 +380,28 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
+
+Tab:AddSlider({
+	Name = "Slider",
+	Min = 0,
+	Max = 20,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "bananas",
+	Callback = function(Value)
+		print(Value)
+		-- เพิ่มค่าความเร็วที่นี่
+		local speed = Value -- สมมุติว่าใช้ค่าจาก Slider เป็น speed
+		print("Speed is: " .. speed)
+		
+		-- เข้าถึง HumanoidRootPart ของตัวละคร
+		local character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
+		local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+		
+		-- การปรับความเร็วของตัวละคร
+		local humanoid = character:WaitForChild("Humanoid")
+		humanoid.WalkSpeed = speed -- ตั้งค่าความเร็วให้กับตัวละคร
+	end    
+})
