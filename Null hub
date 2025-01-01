@@ -374,3 +374,10 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
       		print("button pressed")
   	end    
 })
+
+
+local Tab = Window:MakeTab({
+	Name = "FUN",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
