@@ -350,3 +350,27 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
       		print("button pressed")
   	end    
 })
+
+Tab:AddButton({
+	Name = "Ninja Cameraman)",
+	Callback = function()
+local args = {
+    [1] = "Ninja Cameraman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Ninja Cameraman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
