@@ -390,8 +390,8 @@ local CoolSlider = Tab:AddSlider({
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "speed",
-	Callback = function(Slider:Set(2))
-		print(Slider:Set(2))
+	Callback = function(Value)
+		print(Value)
 		-- เพิ่มค่าความเร็วที่นี่
 		local speed = Value -- สมมุติว่าใช้ค่าจาก Slider เป็น speed
 		print("Speed is: " .. speed)
