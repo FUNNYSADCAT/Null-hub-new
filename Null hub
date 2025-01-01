@@ -408,3 +408,5 @@ Tab:AddSlider({
 
 	end    
 })
+
+Slider:Set(2)
