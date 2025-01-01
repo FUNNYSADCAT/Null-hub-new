@@ -383,13 +383,13 @@ local Tab = Window:MakeTab({
 
 
 Tab:AddSlider({
-	Name = "Slider",
+	Name = "set speed",
 	Min = 0,
-	Max = 20,
-	Default = 5,
+	Max = 100,
+	Default = 16,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "bananas",
+	ValueName = "speed",
 	Callback = function(Value)
 		print(Value)
 		-- เพิ่มค่าความเร็วที่นี่
