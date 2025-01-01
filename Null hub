@@ -403,5 +403,8 @@ Tab:AddSlider({
 		-- การปรับความเร็วของตัวละคร
 		local humanoid = character:WaitForChild("Humanoid")
 		humanoid.WalkSpeed = speed -- ตั้งค่าความเร็วให้กับตัวละคร
+
+
+
 	end    
 })
