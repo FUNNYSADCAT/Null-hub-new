@@ -352,7 +352,7 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
 })
 
 Tab:AddButton({
-	Name = "Ninja Cameraman",
+	Name = "Ninja Cameraman(cost 200)",
 	Callback = function()
 local args = {
     [1] = "Ninja Cameraman"
