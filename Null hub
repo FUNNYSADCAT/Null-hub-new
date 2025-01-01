@@ -382,7 +382,7 @@ local Tab = Window:MakeTab({
 })
 
 
-Tab:AddSlider({
+local CoolSlider = Tab:AddSlider({
 	Name = "set speed",
 	Min = 0,
 	Max = 100,
