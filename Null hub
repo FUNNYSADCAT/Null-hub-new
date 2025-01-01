@@ -375,6 +375,31 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
   	end    
 })
 
+Tab:AddButton({
+	Name = "Dark Speakerman(cost 200)",
+	Callback = function()
+local args = {
+    [1] = "Dark Speakerman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Dark Speakerman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+
 local Tab = Window:MakeTab({
 	Name = "FUN",
 	Icon = "rbxassetid://4483345998",
@@ -389,7 +414,7 @@ local CoolSlider = Tab:AddSlider({
 	Name = "set speed",
 	Min = 0,
 	Max = 100,
-	Default = 16,
+	Default = 50,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "speed",
