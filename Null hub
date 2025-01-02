@@ -405,3 +405,24 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+
+Tab:AddToggle({
+	Name = "Auto rejoin when disconnect(beta)",
+	Default = false,
+	Callback = function(Value)
+local targetPlaceId = 123456789 -- ใส่ PlaceId ที่ต้องการ
+repeat wait() until game.CoreGui:FindFirstChild('RobloxPromptGui')
+
+local lp,po,ts = game:GetService('Players').LocalPlayer,game.CoreGui.RobloxPromptGui.promptOverlay,game:GetService('TeleportService')
+
+po.ChildAdded:connect(function(a)
+    if a.Name == 'ErrorPrompt' then
+        repeat
+            ts:Teleport(targetPlaceId) -- ใช้ PlaceId ที่กำหนดเอง
+            wait(0.5)
+        until false
+    end
+end)
+		print(Value)
+	end    
+})
