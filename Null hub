@@ -410,7 +410,7 @@ Tab:AddToggle({
 	Name = "Auto rejoin when disconnect(beta)",
 	Default = false,
 	Callback = function(Value)
-local targetPlaceId = 123456789 -- ใส่ PlaceId ที่ต้องการ
+local targetPlaceId = 90192874177359 -- ใส่ PlaceId ที่ต้องการ
 repeat wait() until game.CoreGui:FindFirstChild('RobloxPromptGui')
 
 local lp,po,ts = game:GetService('Players').LocalPlayer,game.CoreGui.RobloxPromptGui.promptOverlay,game:GetService('TeleportService')
