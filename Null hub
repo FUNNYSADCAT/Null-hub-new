@@ -427,20 +427,31 @@ end)
 	end    
 })
 
+-- ประกาศตัวแปรสำหรับเก็บสถานะ WalkSpeed เดิม
+local defaultWalkSpeed = 16
+local speedBoost = 50
+
 Tab:AddToggle({
     Name = "Enable Speed",
     Default = false,
     Callback = function(Value)
         local player = game.Players.LocalPlayer
         local character = player.Character or player.CharacterAdded:Wait()
-        local humanoid = character:WaitForChild("Humanoid")
 
-        if Value then
-            humanoid.WalkSpeed = 50 -- กำหนดความเร็วที่ต้องการ
-            print("Speed enabled: WalkSpeed set to 50")
+        -- ตรวจสอบว่ามี Humanoid และตัวละครหรือไม่
+        if character:FindFirstChild("Humanoid") then
+            local humanoid = character.Humanoid
+
+            -- เปลี่ยน WalkSpeed เฉพาะเมื่อเปิด/ปิด
+            if Value then
+                humanoid.WalkSpeed = speedBoost
+                print("Speed enabled: WalkSpeed set to " .. speedBoost)
+            else
+                humanoid.WalkSpeed = defaultWalkSpeed
+                print("Speed disabled: WalkSpeed reset to " .. defaultWalkSpeed)
+            end
         else
-            humanoid.WalkSpeed = 16 -- ค่าเริ่มต้นของ WalkSpeed
-            print("Speed disabled: WalkSpeed reset to 16")
+            warn("Humanoid not found!")
         end
     end    
 })
