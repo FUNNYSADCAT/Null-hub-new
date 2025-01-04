@@ -398,21 +398,6 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
       		print("button pressed")
   	end    
 })
-
-
-local Tab = Window:MakeTab({
-	Name = "get free unit",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddButton({
-	Name = "get Engineer Cameraman",
-	Callback = function()
-local args = {
-    [1] = "Engineer Cameraman",
-    [2] = 0
-}
  
 game:GetService("ReplicatedStorage").Game.Events.TakeUnit:FireServer(unpack(args))
  
