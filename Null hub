@@ -399,11 +399,6 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
   	end    
 })
  
-game:GetService("ReplicatedStorage").Game.Events.TakeUnit:FireServer(unpack(args))
- 
-      		print("button pressed")
-  	end    
-})
 
 local Tab = Window:MakeTab({
 	Name = "Setting",
