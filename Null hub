@@ -398,7 +398,126 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
       		print("button pressed")
   	end    
 })
- 
+
+Tab:AddButton({
+	Name = "Mace Cameraman",
+	Callback = function()
+local args = {
+    [1] = "Mace Cameraman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Mace Cameraman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Mech Cameraman",
+	Callback = function()
+local args = {
+    [1] = "Mech Cameraman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Mech Cameraman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Santa TV Woman",
+	Callback = function()
+local args = {
+    [1] = "Santa TV Woman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Santa TV Woman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Secret Agent",
+	Callback = function()
+local args = {
+    [1] = "Secret Agent"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Secret Agent",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Shield Cameraman",
+	Callback = function()
+local args = {
+    [1] = "Shield Cameraman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Shield Cameraman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+      		print("button pressed")
+  	end    
+})
 
 local Tab = Window:MakeTab({
 	Name = "Setting",
@@ -408,7 +527,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddToggle({
 	Name = "Auto rejoin when disconnect(beta)",
-	Default = false,
+	Default = true,
 	Callback = function(Value)
 local targetPlaceId = 118688242561353 -- ใส่ PlaceId ที่ต้องการ
 repeat wait() until game.CoreGui:FindFirstChild('RobloxPromptGui')
