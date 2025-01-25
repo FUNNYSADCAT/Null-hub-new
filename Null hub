@@ -190,6 +190,26 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
   	end    
 })
 
+Tab:AddButton({
+	Name = "Upgraded Titan Cinemaman(cost 2000)",
+	Callback = function()
+local args = {
+    [1] = "Upgraded Titan Cinemaman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "Upgraded Titan Cinemaman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
 
 local Section = Tab:AddSection({
 	Name = "scientist"
@@ -518,6 +538,67 @@ game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(ar
       		print("button pressed")
   	end    
 })
+
+Tab:AddButton({
+	Name = "CorruptedCameraman(cost 500)",
+	Callback = function()
+local args = {
+    [1] = "CorruptedCameraman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "CorruptedCameraman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+Tab:AddButton({
+	Name = "PumpkinFarmer(cost20)",
+	Callback = function()
+local args = {
+    [1] = "PumpkinFarmer"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "PumpkinFarmer",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
+Tab:AddButton({
+	Name = "SinisterCameraman",
+	Callback = function()
+local args = {
+    [1] = "SinisterCameraman"
+}
+
+game:GetService("ReplicatedStorage").Functions.RequestTower:InvokeServer(unpack(args))
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local position = character:WaitForChild("HumanoidRootPart").CFrame
+
+local args = {
+    [1] = "SinisterCameraman",
+    [2] = position -- ใช้ตำแหน่งของผู้เล่น
+}
+
+game:GetService("ReplicatedStorage").Functions.ChangeMode:InvokeServer(unpack(args))
+
 
 local Tab = Window:MakeTab({
 	Name = "Setting",
