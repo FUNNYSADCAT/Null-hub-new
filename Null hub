@@ -3,7 +3,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "NULL HUB", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Tab = Window:MakeTab({
-	Name = "bypass summon",
+	Name = "bypass place unit",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
